@@ -1,8 +1,8 @@
 // function to convert height if needed
-function convertHeight(height, isMetric) {
+function convertHeight(height) {
     const checkType = typeof height == 'number';
-    if (checkType && !isMetric) {
-        return isMetric ? height : Math.floor((height * 2.54) * 100) / 100;
+    if (checkType) {
+        return Math.floor((height * 2.54) * 100) / 100;
     } else {
         console.log(`Number entered was the wrong type! Type passed: ${typeof height}`);
     }
@@ -15,7 +15,7 @@ const howTall = (height, isMetric) => {
     if (isMetric) {
         console.log(`You are ${height <= 172 ? heights[0] : heights[1]}!`);
     } else {
-        const convertedHeight = convertHeight(height, isMetric);
+        const convertedHeight = convertHeight(height);
         console.log('our converted height: ', convertedHeight)
         console.log(`You are ${convertedHeight <= 172 ? heights[0] : heights[1]}!`)
     }
