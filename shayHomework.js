@@ -61,10 +61,10 @@ function myFavoriteActivity() {
 
 function runProgram() {
     
-  console.log(howTall(72, false));
-  console.log(myFavoriteFood());
-  console.log(myFavoriteActivity());
-  console.log(whatToDrive('clear'))
+  howTall(72, false);
+  myFavoriteFood();
+  myFavoriteActivity();
+  whatToDrive('clear');
   
   return 'Program was ran. Check the console.';  
 };
